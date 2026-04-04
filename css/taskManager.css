@@ -1,0 +1,242 @@
+html{
+    background-color: rgb(1, 1, 1);
+}
+.oboje{
+    display: flex;
+    flex: row;
+    justify-content: center;
+   align-self: flex-start; /* dodaj ovo */
+}
+.lijevo{
+    width:50%;
+    align-self: flex-start; /* dodaj ovo */
+}
+.kontejner {
+    width: 50%;
+  display: flex;
+  flex-direction: column;
+align-self: flex-start; /* dodaj ovo */
+  justify-items: flex-start; 
+  bottom:0;/* Poravnava stavke na desnu stranu */
+}
+
+.desno {
+  background-color: rgba(0, 0, 0, 0.5); /* Pozadina da bude vidljivo */
+  padding: 10px;
+ 
+  top: 170px; /* Pozicionira sadržaj na vrh */
+  
+  width: 100%;
+}
+h1 {
+
+  text-align: center;
+  margin: 50px 30px 30px 30px;
+  color:azure;
+   font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1;
+}
+
+.zaglavlje {
+  display: flex;
+  justify-content: space-between; /* Razmak između h1 i status sekcije */
+  align-items: center; /* Vertikalno poravnanje */
+  margin: 0 30px; /* Odstranjuje margine sa strane */
+}
+
+.status {
+  display: flex;
+  justify-content: flex-end; /* Raspored stavki na desnu stranu */
+  align-items: center;
+  gap: 10px; /* Razmak između stavki */
+  color: azure;
+  color: gray;
+  font-weight: bold;
+  
+}
+.statusBroj{
+  font-size: 25px;
+  color:red;
+  justify-content: center;
+}
+
+.unosZadatka {
+    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 60px auto; /* Automatske margine sa strane za centriranje */
+  background-color: rgb(56, 55, 55);
+  color: gray;
+  border-radius: 50px;
+  padding: 25px;
+  justify-content: left;
+}
+.opisUnos{
+    height:80px;
+    text-align: left;
+}
+.tezina {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label,
+input,textarea {
+  margin-left: 40px;
+  font-size: 14pt;
+  text-align: left;
+}
+
+input {
+  border: 0;
+  width: 80%;
+  border-radius: 7px;
+  height: 30px;
+  background-color: rgb(82, 82, 82);
+  color: white;
+}
+
+.tezina button {
+  height: 40px;
+  width: 170px;
+  background-color: rgb(82, 82, 82);
+  color: white;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+}
+
+.tezina button:hover {
+  background-color: rgb(56, 55, 55); /* Darker background on hover */
+    border: 2px solid yellow; /* Žuta ivica sa 2px debljinom  treba biti cjelokupna sintaksa*/
+}
+button.nizak.active{
+     border: 2px solid green;
+     color:green ;
+}
+button.srednji.active{
+     border: 2px solid yellow;
+     color:yellow ;
+}
+button.visok.active{
+     border: 2px solid red;
+     color:red ;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dodajZadatak {
+  
+      width: 100%;
+      margin-top: 1.25rem;
+      padding: 0.85rem;
+      
+      color: #0e0e10;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: opacity 0.2s, transform 0.1s;
+    
+}
+
+.dodajZadatak:hover {
+  background-color: rgb(56, 55, 55); /* Darker background on hover */
+  border:2px solid yellow;
+  color:white;
+}
+.rok{
+    height:40px;
+}
+
+.zadaci{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+     gap:15px;
+     margin-top: 30px;
+}
+.zadaci button{
+    background-color: black;
+    border-radius:30px;
+    font-weight: bold;
+    border:gray;
+    color:gray;
+    height:40px;
+    width:170px;
+    border:1px solid gray
+}
+.zadaci button:hover{
+    background-color: yellow;
+    color:black;
+}
+.zadaci button:active{
+    background-color: yellow;
+    color:black;
+}
+
+.poruka{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-weight: bold;
+    font-size: 18pt;
+     min-height: 100px; /* dodaj ovo */
+    
+}
+progress{
+    width: 100%;
+}
+.ElementiListe{
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.zadatak {
+    width:70%;
+   height:150px;
+   background-color: rgb(107, 104, 104);
+   border-radius: 30px;
+   color: yellowgreen;
+   padding:30px;
+   margin-top:20px;
+   margin-right:20px;
+}
+.zadaci .active {
+    border: 2px solid yellow;
+    color: yellow;
+}
+.check {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    accent-color: yellow;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.check:disabled {
+    accent-color: green;
+    cursor: not-allowed;
+    opacity: 1;
+}
+.postotak{
+  color:white;
+  justify-content: end;
+}

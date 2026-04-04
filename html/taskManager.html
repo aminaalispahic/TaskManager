@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/taskManager.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <title>Task manager</title>
+  
+  </head>
+  <body>
+    <header class="zaglavlje">
+        <h1>Task<span style="color:yellow">.</span>manager</h1>
+        <div class="status">
+        <h2>Ukupno</h2>
+        <div id="Ukupno" class="statusBroj"></div>
+        <h2>Završeno</h2>
+        <div id="Zavrseno" class="statusBroj"></div>
+        <h2>Aktivno</h2>
+        <div id="Aktivno" class="statusBroj"></div>
+        </div>
+        </header>
+    <br>
+        <hr>
+        <div class="oboje">
+<div class="lijevo">
+        <form class="unosZadatka">
+            <h3 style="margin:40px 40px; font-size:30pt">+ Novi zadatak</h3>
+            <label for="naziv" >NAZIV</label><br>
+            <input type="text" placeholder="Unesite naziv zadatka" id="naziv"><br>
+            <label for="opis">UNESITE OPIS</label><br>
+            <input type="text" class="opisUnos" id="opis" placeholder="Unesite opis Vašeg zadataka"><br>
+            <label for="rok">ROK</label><br>
+            <input type="date" class="rok" id="rokObjava"><br>
+            <label for="prioritet" id="priority">PRIORITET</label><br><br>
+            <div class="tezina">
+                
+             <button  type="button" class="nizak" onclick="setPriority('nizak')">NIZAK</button>
+    <button  type="button" class="srednji" onclick="setPriority('srednji')">SREDNJI</button>
+    <button  type="button" class="visok" onclick="setPriority('visok')">VISOK</button>
+            </div>
+           <div class="container">
+            <button type="button" class="dodajZadatak"  style="text-align: center;" onclick="dodajUBazu(); dajBroj()">DODAJ ZADATAK</button>
+            </div>
+         </form>
+         </div>
+
+         <div class="kontejner">
+  <div class="desno">
+    <div>
+        <h3 style="color:white">Napredak</h3>
+        <div class="postotak"></div>
+    </div>
+    
+    <progress value="0" max="100"></progress><br>
+    <div class="zadaci">
+        <button id="sve" onclick="dajSve()">Sve</button>
+        <button id="aktivne" onclick="Aktivni()">Aktivne</button>
+        <button id="zavrsene" onclick="Zavrseno()">Završene</button>
+        <button id="visoko" onclick="Visok()">Visok prioritet</button>
+    </div>
+    <div class="ElementiListe">
+    <div class="poruka" style="display:block">
+    <p>Nema zadataka</p><br>
+    <p>Iskoristite formu za dodavanje zadataka</p>
+    </div>
+    <div id="zadaciLista" >
+
+    </div></div>
+  </div>
+</div><!---Div za kontejner-->
+</div>
+  <script src="js/ajax.js"></script>
+  </body>
+</html>
+
